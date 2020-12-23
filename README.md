@@ -26,8 +26,14 @@ https://marlinfw.org/docs/basics/install_platformio_vscode.html
 
 # First run
 Before starting your first print Your printer has to be calibrated.
-Start with attaching your leveling probe (it is good idea to stick folded piece of paper or some plastic shim between nozzle and probe, to make probe sit tight and imposible to move during calibration) and go to Configuration / Delta Calibration / Auto Calibration
+Start with attaching your leveling probe (it is good idea to stick folded piece of paper or some plastic shim between nozzle and probe, to make probe sit tight and imposible to move during calibration) and go to Configuration / Delta Calibration / Auto Calibration menu on the LCD menu.
 Store settings after calibration process is compleded.
+
+
 
 ## Fine tuning delta height.
 Logic behind Delta calibration, home to max pos, send effector down towards bed at known steps/mm until brobe triggers, z0 is homing pos minus delta height, delta height equals distance traveled to trigger point + height of probe. If your nozzle is too close to bed after calibration and your probe offset in config menu is -16.20mm change it to -16.10mm and nozzle will rise by 0.1mm, if it is too far away change probe offset in negative direction eg. -16.30 will bring the nozzle closer. 
+
+# Unified Bed Leveling
+After initial Delta calibration is completed, go to Motion / Unified Bed Leveling / and Activate UBL, then go to Step by Step UBL / Build Cold mesh.
+
